@@ -135,6 +135,16 @@
             </x-responsive-nav-link>
         </div>
 
+        @auth
+        <div class="space-y-1">
+        @if(Auth::user()->role_id == '1')
+                    <x-responsive-nav-link class="font-medium text-sm text-white" :href="route('admin.adminboard')">
+                        {{ __('AdminBoard') }}
+                    </x-responsive-nav-link>
+                @endif
+        </div>
+                @endauth
+
         <!-- Responsive Settings Options -->
 
         <div class="pt-4 pb-1 border-t border-gray-200">
@@ -144,12 +154,6 @@
                     <div class="font-medium text-sm text-white">{{ Auth::user()->email }}</div>
                 </div>
 
-                
-                @if(Auth::user()->role_id == '1')
-                    <x-dropdown-link class="font-medium text-sm text-white" :href="route('admin.adminboard')">
-                        {{ __('AdminBoard') }}
-                    </x-dropdown-link>
-                @endif
             @endauth
             @guest
 
