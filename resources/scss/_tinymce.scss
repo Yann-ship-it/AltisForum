@@ -1,0 +1,47 @@
+@import "var";
+
+.tox-statusbar, .tox-promotion-link {
+    display: none !important;
+}
+
+// .tox-edit-area__iframe {
+//     background-color: $second-gray !important;
+//     color: white !important;
+// }
+
+#comment_content_ifr > html > #tinymce > p{
+    color: white !important;
+}
+
+.tox-tinymce {
+    border: 2px solid $main-color !important;
+}
+
+.tox-editor-header {
+    border-bottom: 2px solid $main-color !important;
+}
+
+.tox-editor-header, 
+.tox-menubar,
+.tox-promotion,
+.tox-toolbar-overlord,
+.tox-toolbar__primary
+{
+    background-color: $second-gray !important;
+}
+
+.tox-mbtn__select-label, .tox-tbtn {
+    color: white !important;
+}
+
+div.tox-toolbar__group > button > span > svg {
+    fill: white !important;
+}
+
+.tox-tbtn__select-label {
+    color: $main-color !important;
+}
+        
+p {
+    color: white !important;
+}

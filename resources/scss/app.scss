@@ -1,0 +1,735 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import "admin";
+@import "banned";
+@import "forum";
+@import "home";
+@import "var";
+@import "footer";
+@import "components";
+@import "nav";
+@import "left";
+@import "login";
+@import "tinymce";
+@import "topic";
+
+
+main {
+    width: 90%;
+    margin: auto;
+}
+
+* {
+    font-family: 'Lato', sans-serif;
+}
+
+*, ::before, ::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.tags {
+    color: white;
+    border: 2px solid white; 
+    padding: 2px 13px 2px 13px; 
+    border-radius: 10px; 
+    font-size: 20px;
+}
+
+.Laravel {
+    color: #F05340;
+    border: 2px solid #F05340;
+}
+
+.Java {
+    color: #744e3b; 
+    border: 2px solid #744e3b;
+}
+
+h2 {
+    font-size: 1.5rem;
+}
+
+body {
+    background: $main-color;
+}
+
+#create-topic {
+    border-radius: 20px;
+    width: 90%;
+    margin: auto;
+    padding: 20px;
+    background: #272627;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+} 
+
+#create-topic form {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    width: 30%;
+}
+
+#create-topic .button {
+    margin: auto;
+    margin-top: 20px;
+}
+
+.plus {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.plus i {
+    margin-left: 10px;
+    font-size: 1rem;
+    color: rgb(217, 47, 47);
+}
+
+.button {
+    height: 50px;
+    padding: 18px 22px 18px 20px;
+    gap: 1px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #ff284818;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    font-size: 19px;
+    line-height: 24px;
+    color: #DE233F;
+    font-family: sans-serif;
+    width: fit-content;
+}
+
+  .button:hover {
+    background: #ff284839;
+  }
+  
+  .button:hover .svg-icon {
+    animation: pulse 0.7s linear infinite;
+  }
+
+#create-topic input, #create-topic textarea {
+    background: transparent;
+    color: white;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}        
+
+#create-topic input:focus {
+    outline: none !important;
+    box-shadow: none;
+}
+
+.cont {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+    background: #272627;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    margin-bottom: 50px;
+    padding: 20px;
+    color: white;
+    
+}
+
+#topic .container-forum {
+    width: 100%;
+}
+
+.container-topic {
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+    margin: auto;
+    background: #272627;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    color: white;
+    padding: 20px;
+    border-radius: 20px;
+    margin-bottom: 10px;
+}
+.flex {
+    display: flex;
+    align-items: center;
+}
+
+textarea {
+    margin-top: 15px;
+    width: 500px;
+    height: 100px;
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background: none repeat scroll 0 0 rgba(0, 0, 0, 0.07);
+    border-color: -moz-use-text-color #FFFFFF #FFFFFF -moz-use-text-color;
+    border-image: none;
+    border-radius: 6px 6px 6px 6px;
+    border-style: none solid solid none;
+    border-width: medium 1px 1px medium;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.12) inset;
+    color: #555555;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 1em;
+    line-height: 1.4em;
+    padding: 5px 8px;
+    transition: background-color 0.2s ease 0s;
+  }
+  
+  
+  textarea:focus {
+      background: none repeat scroll 0 0 #FFFFFF;
+      outline-width: 0;
+  }
+
+.com {
+    display: flex;
+    flex-direction: column;
+  }
+
+.form-com {
+    display: flex-end;
+}
+
+#addBan {
+    form {
+        display: flex;
+        flex-direction: column;
+        width: fit-content;
+        gap: 20px;
+        color: white;
+        input {
+            color: black;
+        } 
+    }
+}
+
+.rotate {
+    animation: rotation 5s infinite linear;
+}
+
+@keyframes rotation {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+.user {
+    background-color: $user;
+    color: white;
+    display: flex;
+    width: fit-content;
+    justify-content: center;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 20px;
+    box-shadow: $shadow;
+}
+
+.admin {
+    background-color: $admin;
+    display: flex;
+    color: white;
+    justify-content: center;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 20px;
+    width: fit-content;
+    box-shadow: $shadow;
+}
+
+.role {
+    background-color: $user;
+    color: white;
+    display: flex;
+    width: fit-content;
+    justify-content: center;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 20px;
+    box-shadow: $shadow;
+}
+
+.roles {
+    display: flex;
+    justify-content: space-between;
+}
+
+.moderateur {
+    background-color: $moderator;
+    display: flex;
+    color: white;
+    justify-content: center;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 20px;
+    width: fit-content;
+    box-shadow: $shadow;
+}
+
+.succes {
+    width: 100%;
+    background-color: $succes;
+    padding: 10px;
+    border-radius: 10px;
+    display: flex;
+    font-size: 20px;
+    justify-content: center;
+    color: white;
+}
+
+.error {
+    width: 100%;
+    background-color: $error;
+    padding: 10px;
+    border-radius: 10px;
+    display: flex;
+    font-size: 20px;
+    justify-content: center;
+    color: rgb(174, 165, 165);
+}
+
+#topic {
+    .username {
+        display: flex;
+    }
+    .role {
+        display: flex;
+        justify-content: space-between;
+    }
+    .infos {
+        display: flex;
+        justify-content: space-between;
+        div {
+            width: 100%;
+            .separator {
+                width: 100%;
+                height: 1px; /* Épaisseur de la barre séparatrice */
+                background-color: #ccc; /* Couleur de la barre séparatrice */
+                margin: 10px 0; /* Marge supérieure et inférieure pour l'espace autour de la barre */
+                opacity: 0.3;
+            }
+            
+        }
+        input {
+            display: flex-end;
+            color: $red;
+        }
+    }
+}
+
+.profile_img {
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    margin-right: 10px;
+    object-fit: cover;
+}
+
+.comment-info {
+    display: flex;
+    justify-content: space-between;
+}
+
+.input-div {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 2px solid $red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    box-shadow: 0px 0px 10px $red , inset 0px 0px 10px $red,0px 0px 5px rgb(255, 255, 255);
+  }
+  
+  .icon {
+    color: $red;
+    font-size: 2rem;
+    cursor: pointer;
+  }
+  
+  .input {
+    position: absolute;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    cursor: pointer !important;
+  }
+
+.showuser {
+    .cont {
+        width: 30%;
+    }
+    .showprofile_img {
+        width: 10vw;
+        border-radius: 100%;
+    }
+}
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import "admin";
+@import "banned";
+@import "forum";
+@import "home";
+@import "var";
+@import "footer";
+@import "components";
+@import "nav";
+@import "left";
+@import "login";
+@import "tinymce";
+@import "topic";
+
+* {
+    font-family: 'Lato', sans-serif;
+}
+
+*, ::before, ::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.laravel {
+    color: #F05340;
+    border: 2px solid #F05340; 
+    padding: 2px 13px 2px 13px; 
+    border-radius: 10px; 
+    font-size: 20px;
+}
+
+h2 {
+    font-size: 1.5rem;
+}
+
+body {
+    background: $main-color;
+}
+
+#create-topic {
+    border-radius: 20px;
+    width: 90%;
+    margin: auto;
+    padding: 20px;
+    background: #272627;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+} 
+
+#create-topic form {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    width: 30%;
+}
+
+#create-topic .button {
+    margin: auto;
+    margin-top: 20px;
+}
+
+.plus {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.plus i {
+    margin-left: 10px;
+    font-size: 1rem;
+    color: rgb(217, 47, 47);
+}
+
+.button {
+    height: 50px;
+    padding: 18px 22px 18px 20px;
+    gap: 1px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #ff284818;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    font-size: 19px;
+    line-height: 24px;
+    color: #DE233F;
+    font-family: sans-serif;
+    width: fit-content;
+}
+
+  .button:hover {
+    background: #ff284839;
+  }
+  
+  .button:hover .svg-icon {
+    animation: pulse 0.7s linear infinite;
+  }
+
+#create-topic input, #create-topic textarea {
+    background: transparent;
+    color: white;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}        
+
+#create-topic input:focus {
+    outline: none !important;
+    box-shadow: none;
+}
+
+.cont {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+    background: #272627;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    margin-bottom: 50px;
+    padding: 20px;
+    color: white;
+    
+}
+
+#topic .container-forum {
+    width: 100%;
+}
+
+.container-topic {
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+    margin: auto;
+    background: #272627;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    color: white;
+    padding: 20px;
+    border-radius: 20px;
+    margin-bottom: 10px;
+}
+.flex {
+    display: flex;
+    align-items: center;
+}
+
+textarea {
+    margin-top: 15px;
+    width: 500px;
+    height: 100px;
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background: none repeat scroll 0 0 rgba(0, 0, 0, 0.07);
+    border-color: -moz-use-text-color #FFFFFF #FFFFFF -moz-use-text-color;
+    border-image: none;
+    border-radius: 6px 6px 6px 6px;
+    border-style: none solid solid none;
+    border-width: medium 1px 1px medium;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.12) inset;
+    color: #555555;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 1em;
+    line-height: 1.4em;
+    padding: 5px 8px;
+    transition: background-color 0.2s ease 0s;
+  }
+  
+  
+  textarea:focus {
+      background: none repeat scroll 0 0 #FFFFFF;
+      outline-width: 0;
+  }
+
+.com {
+    display: flex;
+    flex-direction: column;
+  }
+
+.form-com {
+    display: flex-end;
+}
+
+#addBan {
+    form {
+        display: flex;
+        flex-direction: column;
+        width: fit-content;
+        gap: 20px;
+        color: white;
+        input {
+            color: black;
+        } 
+    }
+}
+
+.rotate {
+    animation: rotation 5s infinite linear;
+}
+
+@keyframes rotation {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+.user {
+    background-color: $user;
+    color: white;
+    display: flex;
+    width: fit-content;
+    justify-content: center;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 20px;
+    box-shadow: $shadow;
+}
+
+.admin {
+    background-color: $admin;
+    display: flex;
+    color: white;
+    justify-content: center;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 20px;
+    width: fit-content;
+    box-shadow: $shadow;
+}
+
+.moderateur {
+    background-color: $moderator;
+    display: flex;
+    color: white;
+    justify-content: center;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 20px;
+    width: fit-content;
+    box-shadow: $shadow;
+}
+
+.succes {
+    width: 100%;
+    background-color: $succes;
+    padding: 10px;
+    border-radius: 10px;
+    display: flex;
+    font-size: 20px;
+    justify-content: center;
+    color: white;
+}
+
+.error {
+    width: 100%;
+    background-color: $error;
+    padding: 10px;
+    border-radius: 10px;
+    display: flex;
+    font-size: 20px;
+    justify-content: center;
+    color: rgb(174, 165, 165);
+}
+
+#topic {
+    .username {
+        display: flex;
+    }
+    .role {
+        display: flex;
+        justify-content: space-between;
+    }
+    .infos {
+        display: flex;
+        justify-content: space-between;
+        div {
+            width: 100%;
+            .separator {
+                width: 100%;
+                height: 1px; /* Épaisseur de la barre séparatrice */
+                background-color: #ccc; /* Couleur de la barre séparatrice */
+                margin: 10px 0; /* Marge supérieure et inférieure pour l'espace autour de la barre */
+                opacity: 0.3;
+            }
+            
+        }
+        input {
+            display: flex-end;
+            color: $red;
+        }
+    }
+}
+
+
+
+.profile_img {
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    margin-right: 10px;
+    object-fit: cover;
+}
+
+.comment-info {
+    display: flex;
+    justify-content: space-between;
+}
+
+.input-div {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 2px solid $red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    box-shadow: 0px 0px 10px $red , inset 0px 0px 10px $red,0px 0px 5px rgb(255, 255, 255);
+  }
+  
+  .icon {
+    color: $red;
+    font-size: 2rem;
+    cursor: pointer;
+  }
+  
+  .input {
+    position: absolute;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    cursor: pointer !important;
+  }
+
+.showuser {
+    .cont {
+        width: 30%;
+    }
+    .showprofile_img {
+        width: 10vw;
+        border-radius: 100%;
+    }
+}

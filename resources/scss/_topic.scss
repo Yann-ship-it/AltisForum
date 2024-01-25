@@ -1,0 +1,51 @@
+@import "var";
+
+#forum {
+    float: left;
+    .container-forum {
+        background-color: $second-gray;
+        box-shadow: $shadow;
+        padding: 10px 20px 10px 20px;
+        border-radius: 10px;
+        margin: 20px 0 20px 0;
+        article {
+            h2 {
+                text-align: center;
+                color: white;
+                padding-bottom: 10px;
+            }
+            hr {
+                padding-bottom: 10px;
+            }
+            .topic {
+                display: flex;
+                align-items: center;
+                i {
+                    color: #DE233F;
+                    font-size: 25px;
+                    margin-right: 5px;
+                }
+                a {
+                    color: white;
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #forum { 
+        float: inherit;
+        .container-forum {
+            .topic {
+                justify-content: center;
+            }
+        }
+        .post {
+        }
+    }
+    .container-topic {
+        width: 100% !important;
+    }
+}

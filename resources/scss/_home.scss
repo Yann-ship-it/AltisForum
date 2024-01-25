@@ -1,0 +1,143 @@
+#home {
+    .main-actu{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        margin-top: 100px;
+        .main-actu-leftside {
+            color: white;
+            margin: 10px 0;
+            width: 80%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 10px;
+            h2 {
+                font-size: 35px;
+            }
+            p {
+                font-size: 20px;
+            }
+        }
+        .main-actu-rightside {
+            margin: 0 auto;
+        }
+    }
+    .main-slider{
+        margin-top: 50px;
+        .aol-slide {
+            display: flex;
+            width: 100%;
+            transition: transform 0.5s ease-in-out;
+            .slide {
+                width: 100%;
+                img {
+                    width: 100%;
+                    height: 500px;
+                    border-radius: 20px;
+                    object-fit: cover;
+                    object-position: center;
+                }
+            }
+        }
+    }
+    .compteur {
+        display: flex;
+        justify-content: space-around;
+        margin: 70px 0 70px 0;
+        .infos {
+            width: 10%;
+            height: 150px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            row-gap: 10px;
+            hr  {
+                height: 1px;
+                width: 100%; 
+            } 
+            h2 {
+                color: white;
+            }
+            i {
+                color: white;
+                font-size: 50px;
+            }
+            .numbs {
+                font-size: 30px;
+            }
+        }
+    }
+    .second-actu {
+        background-color: #272627;
+        border-radius: 20px;
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        margin-top: 100px;
+        padding: 20px;
+        margin: 30px 0 30px 0;
+        article {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 10px;
+            color: white;
+            h2 {
+                font-size: 35px;
+            }
+            p {
+                font-size: 20px;
+            }
+        }
+    }
+}
+
+.white {
+    color: white;
+}
+
+@media screen and (max-width: 640px) {
+    .NAV {
+        display: none !important;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .main-actu,
+    .second-actu {
+        grid-template-columns: auto !important;
+        margin: 0 !important;
+    }
+    .contain {
+        margin-top: 20px !important;
+    }
+    .cont {
+        width: 100% !important;
+    }
+}
+
+.logo {
+    width: 20%;
+}
+
+.pagination {
+    text-align: center;
+    margin-top: 10px;
+  }
+  
+  .dot {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background-color: #333;
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .dot.active {
+    background-color: #007bff; /* Couleur pour le point actif */
+  }
+  
+
