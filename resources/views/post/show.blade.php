@@ -62,7 +62,6 @@
                                         <div class="comment-info">
                                             <span>{{ $comment->timeElapsed() }}</span>
                                             @if ($user_id === $comment->user_id || Auth::user()->role_id == '1')
-                                            @dd($comment->user_id)
                                                 <form class="pl-5" action={{ route('comments.destroy', $comment) }}
                                                     method="post" id="post-destroy">
                                                     @csrf
