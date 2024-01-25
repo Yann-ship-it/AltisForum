@@ -36,7 +36,7 @@
 
                             @auth
                                 <button class="button">
-                                    <img class="profile_img" src="{{ asset(Auth::user()->avatar) }}" alt="Avatar de {{ Auth::user()->pseudo }}">
+                                    <img class="profile_img" src="{{ asset(Auth::user()->avatar) }}" alt="">
                                     <div>{{ Auth::user()->pseudo }}</div>
 
                                     <div class="ml-1">
