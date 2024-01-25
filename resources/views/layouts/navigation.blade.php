@@ -142,20 +142,14 @@
                 <div class="px-4">
                     <div class="font-medium text-base text-white">{{ Auth::user()->pseudo }}</div>
                     <div class="font-medium text-sm text-white">{{ Auth::user()->email }}</div>
-
-                    <div class="font-medium text-sm text-white">
-                        @if(Auth::user()->role_id == '1')
-                        <x-dropdown-link :href="route('admin.adminboard')">
-                            {{ __('AdminBoard') }}
-                        </x-dropdown-link>
-                    
-                        @endif
-                    </div>
-                    
                 </div>
 
                 
-                
+                @if(Auth::user()->role_id == '1')
+                    <x-dropdown-link class="font-medium text-sm text-white" :href="route('admin.adminboard')">
+                        {{ __('AdminBoard') }}
+                    </x-dropdown-link>
+                @endif
             @endauth
             @guest
 
