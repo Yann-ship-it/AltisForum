@@ -24,7 +24,7 @@
 }
 
   .logo {
-    color: white;
+    width: 20% !important;
   }
   .container-link {
     display: flex;
@@ -33,3 +33,9 @@
   .container-link {
     display: flex;
   } 
+
+  @media screen and (max-width: 640px) {
+    .NAV {
+        display: none !important;
+    }
+}
