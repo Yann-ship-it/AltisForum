@@ -129,13 +129,11 @@
             </x-responsive-nav-link>
         </div>
 
-        <div class="space-y-1">
-            @if(Auth::user()->role_id == '1')
-                <x-responsive-nav-link class="text-white" :href="route('admin.adminboard')">
-                    {{ __('AdminBoard') }}
-                </x-responsive-nav-link>
-            @endif
-        </div>
+        @if(Auth::user()->role_id == '1')
+                                    <x-dropdown-link :href="route('admin.adminboard')">
+                                        {{ __('AdminBoard') }}
+                                    </x-dropdown-link>
+                                    @endif
 
 
         <div class="space-y-1">
