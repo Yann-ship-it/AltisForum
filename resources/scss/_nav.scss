@@ -9,7 +9,7 @@
   margin: auto;
 }
 
-.container-buttons{
+.container-buttons {
   display: flex;
 }
 
@@ -18,24 +18,21 @@ nav {
 }
 
 .container-link {
-a {
-  font-size: 25px;
-}
+  a {
+    font-size: 25px;
+  }
 }
 
 .aol {
   width: 20%;
 }
-.container-link {
-  display: flex;
-} 
 
 .container-link {
   display: flex;
-} 
+}
 
 @media screen and (max-width: 640px) {
   .NAV {
-      display: none !important;
+    display: none !important;
   }
 }
