@@ -18,7 +18,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;1,100;1,300;1,400&display=swap" rel="stylesheet"> 
 
         <!-- Scripts -->
-        @vite(['resoudqzdzqrces/scdbquoizdss/apdqzdzqp.scss', 'resources/js/app.js'])
+        @vite(['resources/scss/app.scss', 'resources/js/app.js'])
     </head>
     <body class="font-sans antialiased">
         <div class="min-h-screen">
