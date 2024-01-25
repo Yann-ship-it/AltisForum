@@ -18,10 +18,6 @@
         @method('patch')
 
         <div>
-            <img class="profile_img" src="{{ asset(Auth::user()->avatar) }}" alt="Avatar de {{ Auth::user()->pseudo }}">
-        </div>
-
-        <div>
             <x-input-label for="role" class="text-white" :value="__('Role')" />
             <x-text-input id="role" name="role" type="text" class="mt-1 text-black block w-full"
                 value="{{ $user->role->role_name }}" disabled />
@@ -29,8 +25,8 @@
 
         <div>
             <x-input-label for="name" class="text-white" :value="__('Name')" />
-            <x-text-input id="name" name="name" type="text" class="text-black mt-1 block w-full" :value="old('name', $user->name)"
-                required autofocus autocomplete="name" />
+            <x-text-input id="name" name="name" type="text" class="text-black mt-1 block w-full" :value="old('name', $user->pseudo)"
+                required autofocus autocomplete="name"  />
             <x-input-error class="mt-2" :messages="$errors->get('name')" />
         </div>
 
