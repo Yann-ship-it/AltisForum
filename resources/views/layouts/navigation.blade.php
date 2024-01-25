@@ -136,7 +136,7 @@
         </div>
 
         @auth
-        <div class="space-y-1">
+        <div class="space-y-1 pb-3">
         @if(Auth::user()->role_id == '1')
                     <x-responsive-nav-link class="font-medium text-sm text-white" :href="route('admin.adminboard')">
                         {{ __('AdminBoard') }}
